@@ -1,13 +1,7 @@
 import React from 'react'
-
-const Part = (props) => {
-   return (
-    <p>{props.name} {props.exercise}</p>
-   )
-} 
+import Part from './Part'
 
 const Content = ({course}) => {
-  console.log(course.parts[0].exercises)
     return (
     <div>
       <Part name={course.parts[0].name} exercise={course.parts[0].exercises}/>
