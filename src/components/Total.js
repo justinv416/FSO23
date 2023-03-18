@@ -1,9 +1,14 @@
 import React from 'react'
 
+
 const Total = ({course}) => {
+  const parts = course.parts;
+  const total = parts.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue.exercises
+  }, 0)
   return (
     <div>
-        <p>Number of exercises {course.parts[0].exercises + course.parts[1].exercises + course.parts[2].exercises}</p>
+        <p><b>Total number of exercises: {total}</b></p>
     </div>
   )
 }
